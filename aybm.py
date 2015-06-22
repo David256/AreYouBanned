@@ -23,8 +23,9 @@ class ayb():
         if fuente.find(inbuscar)!=-1 and fuente.find(fibuscar)!=-1:
             pseudoInicio = fuente.find(inbuscar)
             inicio = int(pseudoInicio) + len(inbuscar)
-            fin = fuente.find(fibuscar)
-            estado = fuente[inicio,fin]
+            neoFuente = fuente[inicio:]
+            fin = neoFuente.find(fibuscar)
+            estado = neoFuente[:fin]
             return estado
         else:
             return False
