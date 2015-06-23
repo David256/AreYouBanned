@@ -19,6 +19,6 @@ print("Are You Banned - by David256")
 print("")
 
 url = input("Escribe la URL: ")
-info = ay.enviar(url)
+info = ay.enviar(url.encode('utf-8'))
 estado = ay.extraerEstado(info)
-print(info)
+print(estado)
